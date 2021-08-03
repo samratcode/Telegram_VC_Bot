@@ -28,7 +28,7 @@ PLAYOUT_FILE = "input.raw"
 PLAY_LOCK = asyncio.Lock()
 
 
-@app.on_message(filters.command("help") & ~filters.private)
+@app.on_message(filters.command("vchelp") & ~filters.private)
 async def help(_, message):
     await message.reply_text(HELP_TEXT, quote=False)
 
